@@ -10,7 +10,7 @@ FOODS = ['pizza', 'cake', 'hamburger', 'pasta', 'salad']
 
 class StupidRecipesDataset:
 
-    def __init__(self, generate_food_randomly=True, random_food_len=5):
+    def __init__(self, generate_food_randomly=True, random_food_len=1):
         self.generate_food_randomly = generate_food_randomly
         self.random_food_len = random_food_len
         self.i = 0
@@ -28,8 +28,8 @@ class StupidRecipesDataset:
         food = self.get_food()
 
         return RecipeRecord(
-            # name='A recipe for %s' % food,
-            name='%s' % food,
+            name='A recipe for %s' % food,
+            # name='%s' % food,
             ingredients=[],
             instructions="Just make the %s, you'll do great" % food,
             # instructions="Just make the %s" % food,

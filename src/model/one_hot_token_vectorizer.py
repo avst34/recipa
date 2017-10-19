@@ -34,7 +34,7 @@ class OneHotTokenVectorizer:
         ]
 
     def vectorize_token(self, token):
-        return self._get_encoder().encode(token)
+        return self._get_encoder().encode([token])[0]
 
     def devectorize_vector(self, vector):
         return self._get_encoder().decode(vector)

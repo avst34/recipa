@@ -28,7 +28,7 @@ for sample in samples[:10]:
     print(''.join(sample[0]))
     print(''.join(sample[1]))
 #
-train, test = [samples[:int(len(samples) * 0.9)], samples[int(len(samples) * 0.9):]]
+train, test = [samples[:int(len(samples) * 0.98)], samples[int(len(samples) * 0.98):]]
 model = RecipaModel()
 predictor = model.fit(train, test_samples=test)
 
